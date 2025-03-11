@@ -2,5 +2,9 @@
     "home": {
         "title": "Home",
         "welcome": "Welcome to the home page!"
+    },
+    "work": {
+        "title": "Work",
+        "welcome": "Page under construction!"
     }
 }

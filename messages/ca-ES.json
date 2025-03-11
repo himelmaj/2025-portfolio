@@ -2,5 +2,9 @@
     "home": {
         "title": "Inici",
         "welcome": "Benvingut a la pàgina d'inici!"
+    },
+    "work": {
+        "title": "Treball",
+        "welcome": "Pagina en construcció!"
     }
 }
