@@ -6,5 +6,9 @@
     "work": {
         "title": "Trabajo",
         "welcome": "Pagina en construcción!"
+    },
+    "video": {
+        "title": "Vídeo",
+        "welcome": "Vídeo en desarrollo!"
     }
 }

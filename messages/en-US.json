@@ -6,5 +6,9 @@
     "work": {
         "title": "Work",
         "welcome": "Page under construction!"
+    },
+    "video": {
+        "title": "Video",
+        "welcome": "Video in development!"
     }
 }

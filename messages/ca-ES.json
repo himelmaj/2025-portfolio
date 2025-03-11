@@ -6,5 +6,9 @@
     "work": {
         "title": "Treball",
         "welcome": "Pagina en construcció!"
+    },
+    "video": {
+        "title": "Vídeo",
+        "welcome": "Vídeo en desenvolupament!"
     }
 }
