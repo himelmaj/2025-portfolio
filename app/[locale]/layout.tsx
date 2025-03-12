@@ -17,11 +17,17 @@ import { geistSans, geistMono, robotoSans, robotoMono } from '@/lib/fonts';
 import { ThemeProvider } from "@/context/theme-provider"
 
 
-export default async function LocaleLayout({ children, params }: { children: React.ReactNode; params: Promise<{ locale: Locale }>; }) {
+type LayoutProps = {
+    children: React.ReactNode;
+    params: Promise<{ locale: Locale }>;
+}
+
+
+export default async function LocaleLayout({ children, params }: LayoutProps) {
 
     const { locale } = await params;
 
-    if (!locales.includes(locale as Locale)) {
+    if (!locales.includes(locale)) {
         notFound();
     }
 
