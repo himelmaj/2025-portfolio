@@ -10,11 +10,13 @@ import { locales, Locale } from '@/i18n/routing';
 
 // fonts
 
-import { geistSans, geistMono, robotoSans, robotoMono } from '@/lib/fonts';
+import { inter, monsieur, imperial, jetbrains } from "@/lib/fonts";
 
 // theme
 
 import { ThemeProvider } from "@/context/theme-provider"
+
+import Header from "@/components/header";
 
 
 type LayoutProps = {
@@ -35,7 +37,7 @@ export default async function LocaleLayout({ children, params }: LayoutProps) {
 
     return (
         <html lang={locale}>
-            <body className={cn(geistSans, geistMono, robotoSans, robotoMono)}>
+            <body className={cn(inter.variable, monsieur.variable, imperial.variable , jetbrains.variable)}>
                 <NextIntlClientProvider messages={messages}>
                     <ThemeProvider
                         attribute="class"
@@ -43,6 +45,7 @@ export default async function LocaleLayout({ children, params }: LayoutProps) {
                         enableSystem
                         disableTransitionOnChange
                     >
+                        <Header />
                         {children}
                     </ThemeProvider>
                 </NextIntlClientProvider>
