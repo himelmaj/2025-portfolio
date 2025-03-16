@@ -10,5 +10,19 @@
     "video": {
         "title": "Video",
         "welcome": "Video in development!"
+    },
+    "nav": {
+        "home": {
+            "path": "/",
+            "label": "Home"
+        },
+        "work": {
+            "path": "/work",
+            "label": "Work"
+        },
+        "video": {
+            "path": "/video",
+            "label": "Video"
+        }
     }
 }

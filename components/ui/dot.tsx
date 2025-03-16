@@ -18,7 +18,6 @@ const Dot = ({ className }: DotProps) => {
                 stiffness: 260,
                 damping: 20
             }}
-            whileTap={{ scale: 0.9 }}
         />
     );
 };

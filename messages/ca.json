@@ -10,5 +10,19 @@
     "video": {
         "title": "Vídeo",
         "welcome": "Vídeo en desenvolupament!"
+    },
+    "nav": {
+        "home": {
+            "path": "/",
+            "label": "Inici"
+        },
+        "work": {
+            "path": "/work",
+            "label": "Treball"
+        },
+        "video": {
+            "path": "/video",
+            "label": "Vídeo"
+        }
     }
 }

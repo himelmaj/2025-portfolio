@@ -10,7 +10,7 @@ import { locales, Locale } from '@/i18n/routing';
 
 // fonts
 
-import { inter, monsieur, imperial, jetbrains } from "@/lib/fonts";
+import { inter, jetbrains } from "@/lib/fonts";
 
 // theme
 
@@ -37,16 +37,19 @@ export default async function LocaleLayout({ children, params }: LayoutProps) {
 
     return (
         <html lang={locale}>
-            <body className={cn(inter.variable, monsieur.variable, imperial.variable , jetbrains.variable)}>
+            <body className={cn(inter.variable, jetbrains.variable, "opacity-90")}>
                 <NextIntlClientProvider messages={messages}>
                     <ThemeProvider
                         attribute="class"
-                        defaultTheme="system"
+                        defaultTheme="light"
                         enableSystem
                         disableTransitionOnChange
                     >
-                        <Header />
-                        {children}
+                        <div className="flex flex-col min-h-screen p-8">
+                            <Header />
+                            {children}
+                        </div>
+
                     </ThemeProvider>
                 </NextIntlClientProvider>
             </body>

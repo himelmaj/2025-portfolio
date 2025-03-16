@@ -1,8 +1,11 @@
 import React from 'react'
+import PaintCanvas from '@/components/paint-canvas'
 
 const Work = () => {
   return (
-    <div>Work</div>
+    <div className=' flex flex-1'>
+      <PaintCanvas />
+    </div>
   )
 }
 

@@ -1,7 +1,9 @@
 "use client";
+
 import { useRef, useEffect } from "react";
 
 const PaintCanvas = () => {
+
     const canvasRef = useRef<HTMLCanvasElement | null>(null);
 
     useEffect(() => {
@@ -21,6 +23,11 @@ const PaintCanvas = () => {
         const color = rootStyle.getPropertyValue('--foreground');
 
         context.strokeStyle = color;
+        context.lineJoin = 'round';
+        context.lineCap = 'round';
+        context.lineWidth = 2;
+
+        
         let isDrawing = false;
         let lastX = 0;
         let lastY = 0;

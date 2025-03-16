@@ -1,21 +1,24 @@
+"use client";
+
 const Hero = () => {
-    return (
-      <section className="absolute bottom-5 left-5 text-6xl font-semibold -tracking-tight leading-none">
-        <h1>
-          HIMEL
-          <br />
-          MAJUMDER
-          <br />
-          <span className="inline-flex items-center">
-            **WEB <span className="ml-3 font-jetbrains font-light italic">Developer</span>
-          </span>
-          <br />
-          BASED IN BCN
-        </h1>
-      </section>
-    )
-  }
-  
-  export default Hero
-  
-  
+  return (
+    <section className=" w-lg flex flex-col gap-4 text-ba">
+      <div className=" h-3 w-3 bg-current" />
+
+      <p>
+        <span className="underline">Himel Majumder</span> is a web developer and designer, interested in ideas surrounding technology, design, art, and the future.
+      </p>
+
+      <p>
+        
+      </p>
+
+      <p>
+        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+      </p>
+    </section>
+  )
+}
+
+export default Hero
+
