@@ -123,7 +123,7 @@
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-background text-foreground antialiased font-inter text-sm leading-normal opacity-100;
+    @apply bg-background text-foreground antialiased font-inter font-semibold text-sm leading-normal opacity-100;
   }
 
   h1 {

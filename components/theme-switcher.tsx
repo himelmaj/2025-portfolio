@@ -2,7 +2,8 @@
 
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
-import Dot from "./ui/dot";
+// import Dot from "./ui/dot";
+import { cn } from "@/lib/utils";
 
 const ThemeSwitcher = () => {
   const { theme, setTheme } = useTheme();
@@ -17,11 +18,10 @@ const ThemeSwitcher = () => {
   const themes = ["light", "dark", "system"];
 
   return (
-    <div className="flex flex-col gap-2 **:cursor-pointer">
+    <div className="flex gap-2 **:cursor-pointer">
       {themes.map((t) => (
-        <button key={t} onClick={() => setTheme(t)} className="flex items-center">
-          <span className="mr-2 capitalize">{t}</span>
-          <Dot className={`h-2 w-2 ${theme === t ? "rounded-none" : "opacity-0"}`} />
+        <button key={t} onClick={() => setTheme(t)} className={cn("flex items-center gap-2", (theme !== t && "opacity-50"))}>
+          <span>{t}</span>
         </button>
       ))}
     </div>

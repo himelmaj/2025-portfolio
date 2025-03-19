@@ -2,7 +2,7 @@ import ContactLinks from "@/components/contact-links"
 import Hero from "@/components/hero"
 import ThemeSwitcher from "@/components/theme-switcher"
 import LocaleSwitcher from "@/components/locale-switcher"
-import PaintCanvas from "@/components/paint-canvas"
+// import PaintCanvas from "@/components/paint-canvas"
 
 
 const Home = () => {

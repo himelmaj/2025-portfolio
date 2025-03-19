@@ -2,8 +2,10 @@ import { Inter, JetBrains_Mono, Roboto } from "next/font/google";
 
 export const inter = Inter({
     variable: "--font-inter",
-    weight: ["400", "500", "600"],
+    weight: ["400", "500", "600", "700", "800"],
     subsets: ["latin"],
+    display: "swap",
+    style: "normal",
 });
 
 export const jetbrains = JetBrains_Mono({

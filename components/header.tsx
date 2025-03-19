@@ -33,11 +33,11 @@ const Header = () => {
     <header>
       <nav className="">
         <ul className="flex flex-wrap justify-between uppercase">
-          <span className="w-20 text-left">X{x}</span>
+          <span className="w-20 text-left hidden md:block">X{x}</span>
           {ROUTES.map((route: Route) => (
             <NavLink {...route} isActive={isActive(route.href)} key={route.href} className=" hover:text-orange-400" />
           ))}
-          <span className="w-20 text-right">Y{y}</span>
+          <span className="w-20 text-right hidden md:block">Y{y}</span>
         </ul>
       </nav>
     </header>
