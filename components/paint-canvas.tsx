@@ -25,7 +25,7 @@ const PaintCanvas = () => {
         context.strokeStyle = color;
         context.lineJoin = 'round';
         context.lineCap = 'round';
-        context.lineWidth = 2;
+        context.lineWidth = 5;
 
         
         let isDrawing = false;
@@ -66,7 +66,7 @@ const PaintCanvas = () => {
 
 
   return (
-    <canvas ref={canvasRef} className=" border-2 flex flex-1" />
+    <canvas ref={canvasRef} className="absolute min-h-screen min-w-screen z-0" />
   )
 }
 

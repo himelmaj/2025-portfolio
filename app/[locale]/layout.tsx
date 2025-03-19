@@ -10,7 +10,7 @@ import { locales, Locale } from '@/i18n/routing';
 
 // fonts
 
-import { inter, jetbrains } from "@/lib/fonts";
+import { inter, jetbrains, roboto } from "@/lib/fonts";
 
 // theme
 
@@ -18,11 +18,17 @@ import { ThemeProvider } from "@/context/theme-provider"
 
 import Header from "@/components/header";
 
+import type { Metadata } from "next";
+
 
 type LayoutProps = {
     children: React.ReactNode;
     params: Promise<{ locale: Locale }>;
 }
+
+export const metadata: Metadata = {
+    title: "Himel Majumder"
+};
 
 
 export default async function LocaleLayout({ children, params }: LayoutProps) {
@@ -37,7 +43,7 @@ export default async function LocaleLayout({ children, params }: LayoutProps) {
 
     return (
         <html lang={locale}>
-            <body className={cn(inter.variable, jetbrains.variable, "opacity-90")}>
+            <body className={cn(inter.variable, jetbrains.variable, roboto.variable)}>
                 <NextIntlClientProvider messages={messages}>
                     <ThemeProvider
                         attribute="class"

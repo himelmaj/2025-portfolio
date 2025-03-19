@@ -24,5 +24,10 @@
             "path": "/video",
             "label": "Video"
         }
+    },
+    "locales": {
+        "en": "English",
+        "ca": "Catalan",
+        "es": "Spanish"
     }
 }

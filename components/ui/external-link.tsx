@@ -11,7 +11,7 @@ type ExternalLinkProps = {
 
 const ExternalLink = ({ href, children, className, target = "_blank"  }: ExternalLinkProps) => {
     return (
-        <a href={href} target={target} rel="noopener noreferrer" className={cn("", className)}>
+        <a href={href} target={target} rel="noopener noreferrer" className={cn(" opacity-80 hover:opacity-100", className)}>
             {children}
         </a>
     )

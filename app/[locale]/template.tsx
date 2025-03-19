@@ -1,6 +1,9 @@
 // app/template.tsx
 'use client';
+
+
 import { motion } from 'motion/react';
+
 
 const variants = {
   hidden: { opacity: 0 },

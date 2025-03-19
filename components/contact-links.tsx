@@ -13,8 +13,8 @@ const ContactLinks = () => {
   return (
     <section className='flex flex-col'>
 
-      <ExternalLink href='mailto:himelmajumder1@gmail.com' >
-        {"himelmajumder1@gmail.com"}
+      <ExternalLink href='mailto:himelmajumder1@gmail.com'>
+        {"info@himel.studio"}
       </ExternalLink>
 
       <div className='flex flex-wrap gap-4'>
