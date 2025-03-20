@@ -1,0 +1,33 @@
+{
+    "home": {
+        "title": "Home",
+        "welcome": "Welcome to the home page!"
+    },
+    "work": {
+        "title": "Work",
+        "welcome": "Page under construction!"
+    },
+    "video": {
+        "title": "Video",
+        "welcome": "Video in development!"
+    },
+    "nav": {
+        "home": {
+            "path": "/",
+            "label": "Home"
+        },
+        "work": {
+            "path": "/work",
+            "label": "Work"
+        },
+        "video": {
+            "path": "/video",
+            "label": "Video"
+        }
+    },
+    "locales": {
+        "en": "English",
+        "ca": "Catalan",
+        "es": "Spanish"
+    }
+}

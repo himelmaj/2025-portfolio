@@ -1,0 +1,33 @@
+{
+    "home": {
+        "title": "Inicio",
+        "welcome": "¡Bienvenido a la página de inicio!"
+    },
+    "work": {
+        "title": "Trabajo",
+        "welcome": "Pagina en construcción!"
+    },
+    "video": {
+        "title": "Vídeo",
+        "welcome": "Vídeo en desarrollo!"
+    },
+    "nav": {
+        "home": {
+            "path": "/",
+            "label": "Inicio"
+        },
+        "work": {
+            "path": "/work",
+            "label": "Trabajo"
+        },
+        "video": {
+            "path": "/video",
+            "label": "Vídeo"
+        }
+    },
+    "locales": {
+        "en": "Inglés",
+        "ca": "Catalán",
+        "es": "Español"
+    }
+}

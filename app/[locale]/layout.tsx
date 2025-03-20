@@ -10,18 +10,32 @@ import { locales, Locale } from '@/i18n/routing';
 
 // fonts
 
-import { geistSans, geistMono, robotoSans, robotoMono } from '@/lib/fonts';
+import { inter, jetbrains, roboto } from "@/lib/fonts";
 
 // theme
 
 import { ThemeProvider } from "@/context/theme-provider"
 
+import Header from "@/components/header";
 
-export default async function LocaleLayout({ children, params }: { children: React.ReactNode; params: Promise<{ locale: Locale }>; }) {
+import type { Metadata } from "next";
+
+
+type LayoutProps = {
+    children: React.ReactNode;
+    params: Promise<{ locale: Locale }>;
+}
+
+export const metadata: Metadata = {
+    title: "Himel Majumder"
+};
+
+
+export default async function LocaleLayout({ children, params }: LayoutProps) {
 
     const { locale } = await params;
 
-    if (!locales.includes(locale as Locale)) {
+    if (!locales.includes(locale)) {
         notFound();
     }
 
@@ -29,15 +43,19 @@ export default async function LocaleLayout({ children, params }: { children: Rea
 
     return (
         <html lang={locale}>
-            <body className={cn(geistSans, geistMono, robotoSans, robotoMono)}>
+            <body className={cn(inter.variable, jetbrains.variable, roboto.variable)}>
                 <NextIntlClientProvider messages={messages}>
                     <ThemeProvider
                         attribute="class"
-                        defaultTheme="system"
+                        defaultTheme="light"
                         enableSystem
                         disableTransitionOnChange
                     >
-                        {children}
+                        <div className="flex flex-col min-h-screen p-8">
+                            <Header />
+                            {children}
+                        </div>
+
                     </ThemeProvider>
                 </NextIntlClientProvider>
             </body>

@@ -1,0 +1,33 @@
+{
+    "home": {
+        "title": "Inici",
+        "welcome": "Benvingut a la pàgina d'inici!"
+    },
+    "work": {
+        "title": "Treball",
+        "welcome": "Pagina en construcció!"
+    },
+    "video": {
+        "title": "Vídeo",
+        "welcome": "Vídeo en desenvolupament!"
+    },
+    "nav": {
+        "home": {
+            "path": "/",
+            "label": "Inici"
+        },
+        "work": {
+            "path": "/work",
+            "label": "Treball"
+        },
+        "video": {
+            "path": "/video",
+            "label": "Vídeo"
+        }
+    },
+    "locales": {
+        "en": "Anglès",
+        "ca": "Català",
+        "es": "Espanyol"
+    }
+}
