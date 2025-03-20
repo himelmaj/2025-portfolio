@@ -1,5 +1,5 @@
 import React from 'react'
-import PaintCanvas from '@/components/paint-canvas'
+// import PaintCanvas from '@/components/paint-canvas'
 
 const Work = () => {
   return (
