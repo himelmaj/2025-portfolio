@@ -8,10 +8,14 @@ const nextConfig: NextConfig = {
             {
                 protocol: "https",
                 hostname: "cdn.sanity.io",
-            },
+            }
         ],
     },
     devIndicators: false,
+
+    experimental: {
+        viewTransition: true
+    }
 };
 
 const withNextIntl = createNextIntlPlugin();

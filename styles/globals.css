@@ -132,7 +132,15 @@
     @apply bg-background text-foreground antialiased font-inter font-semibold text-sm leading-normal opacity-100;
   }
 
-  h1 {
-    @apply text-6xl font-bold font-inter;
+  button {
+    @apply cursor-pointer
+  }
+
+  h1, h2, h3, h4 {
+    @apply text-balance;
+  }
+
+  p {
+    @apply text-pretty;
   }
 }

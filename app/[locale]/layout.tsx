@@ -1,5 +1,6 @@
 import "@/styles/globals.css";
 import { cn } from '@/lib/utils';
+import { unstable_ViewTransition as ViewTransition } from "react"
 
 //  i18n
 
@@ -10,13 +11,13 @@ import { locales, Locale } from '@/i18n/routing';
 
 // fonts
 
-import { inter, jetbrains, roboto } from "@/lib/fonts";
+import { fontsVaribles } from "@/lib/fonts";
 
 // theme
 
 import { ThemeProvider } from "@/context/theme-provider"
 
-import Header from "@/components/header";
+import Header from "@/components/layout/header";
 
 import type { Metadata } from "next";
 
@@ -27,7 +28,8 @@ type LayoutProps = {
 }
 
 export const metadata: Metadata = {
-    title: "Himel Majumder"
+    title: "Himel Majumder",
+    description: "Himel Majumder is a web developer and designer interested in ideas surrounding technology, design, the arts, e-sports, & artificial intelligence."
 };
 
 
@@ -43,7 +45,7 @@ export default async function LocaleLayout({ children, params }: LayoutProps) {
 
     return (
         <html lang={locale}>
-            <body className={cn(inter.variable, jetbrains.variable, roboto.variable)}>
+            <body className={cn(fontsVaribles)}>
                 <NextIntlClientProvider messages={messages}>
                     <ThemeProvider
                         attribute="class"
@@ -53,7 +55,10 @@ export default async function LocaleLayout({ children, params }: LayoutProps) {
                     >
                         <div className="flex flex-col min-h-screen p-8">
                             <Header />
-                            {children}
+
+                            <ViewTransition name="page">
+                                {children}
+                            </ViewTransition>
                         </div>
 
                     </ThemeProvider>

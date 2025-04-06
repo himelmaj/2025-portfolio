@@ -1,6 +1,6 @@
 "use client";
 
-import ExternalLink from './ui/external-link'
+import ExternalLink from '@/components/ui/external-link'
 
 
 const SOCIAL_LINKS = [
@@ -9,7 +9,7 @@ const SOCIAL_LINKS = [
   { href: 'https://twitter.com/himel_maj', text: 'X' },
 ]
 
-const ContactLinks = () => {
+const SocialLinks = () => {
   return (
     <section className='flex flex-col'>
 
@@ -30,4 +30,4 @@ const ContactLinks = () => {
   )
 }
 
-export default ContactLinks
+export default SocialLinks

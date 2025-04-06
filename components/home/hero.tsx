@@ -1,15 +1,15 @@
 "use client";
 
-import ExternalLink from "./ui/external-link";
+import ExternalLink from "../ui/external-link";
 
 const Hero = () => {
   return (
-    <div className=" md:w-sm flex flex-col gap-5 text-pretty">
-      <div className="flex flex-wrap gap-2">
+    <div className=" md:w-sm flex flex-col text-pretty gap-4">
+      {/* <div className="flex flex-wrap gap-2">
         <div className="h-0 w-0 border-l-[7px] border-r-[7px] border-b-[12px] border-transparent border-b-current"></div>
         <div className="h-3 w-3 bg-current" />
         <div className="h-3 w-3 bg-current rounded-full" />
-      </div>
+      </div> */}
       <p>
         Himel Majumder is a web developer and designer interested in ideas surrounding technology, design, the arts, e-sports, & artificial intelligence.
       </p>
