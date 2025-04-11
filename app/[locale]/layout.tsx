@@ -1,6 +1,5 @@
 import "@/styles/globals.css";
 import { cn } from '@/lib/utils';
-
 //  i18n
 
 import { NextIntlClientProvider } from 'next-intl';
@@ -10,13 +9,13 @@ import { locales, Locale } from '@/i18n/routing';
 
 // fonts
 
-import { inter, jetbrains, roboto } from "@/lib/fonts";
+import { fontsVaribles } from "@/lib/fonts";
 
 // theme
 
 import { ThemeProvider } from "@/context/theme-provider"
 
-import Header from "@/components/header";
+import Navbar from "@/components/layout/navbar";
 
 import type { Metadata } from "next";
 
@@ -27,7 +26,8 @@ type LayoutProps = {
 }
 
 export const metadata: Metadata = {
-    title: "Himel Majumder"
+    title: "Himel Majumder",
+    description: "Himel Majumder is a web developer and designer interested in ideas surrounding technology, design, the arts, e-sports, & artificial intelligence."
 };
 
 
@@ -43,7 +43,7 @@ export default async function LocaleLayout({ children, params }: LayoutProps) {
 
     return (
         <html lang={locale}>
-            <body className={cn(inter.variable, jetbrains.variable, roboto.variable)}>
+            <body className={cn(fontsVaribles)}>
                 <NextIntlClientProvider messages={messages}>
                     <ThemeProvider
                         attribute="class"
@@ -52,8 +52,14 @@ export default async function LocaleLayout({ children, params }: LayoutProps) {
                         disableTransitionOnChange
                     >
                         <div className="flex flex-col min-h-screen p-8">
-                            <Header />
-                            {children}
+                            <header>
+                                <Navbar />
+                            </header>
+
+                            <main className="flex flex-col flex-1">
+                                {children}
+                            </main>
+
                         </div>
 
                     </ThemeProvider>

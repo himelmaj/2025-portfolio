@@ -16,13 +16,13 @@
             "path": "/",
             "label": "Inici"
         },
-        "work": {
-            "path": "/work",
-            "label": "Treball"
+        "projects": {
+            "path": "/projects",
+            "label": "Projectes"
         },
-        "video": {
-            "path": "/video",
-            "label": "Vídeo"
+        "info": {
+            "path": "/info",
+            "label": "Info"
         }
     },
     "locales": {

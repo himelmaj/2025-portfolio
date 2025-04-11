@@ -1,17 +1,15 @@
 "use client";
 
 import { cn } from "@/lib/utils";
+import React from "react";
 
-type ExternalLinkProps = {
-    href: string;
-    children: string;
-    target?: "_blank" | "_self" | "_parent" | "_top";
-    className?: string;
-};
+interface ExternalLinkProps extends React.AnchorHTMLAttributes<HTMLAnchorElement>{
+    className?: string
+}
 
-const ExternalLink = ({ href, children, className, target = "_blank"  }: ExternalLinkProps) => {
+const ExternalLink = ({ children, className, ...props  }: ExternalLinkProps) => {
     return (
-        <a href={href} target={target} rel="noopener noreferrer" className={cn("", className)}>
+        <a {...props} className={cn(className)} target="_blank" rel="noopener noreferrer">
             {children}
         </a>
     )
