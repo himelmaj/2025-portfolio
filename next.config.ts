@@ -11,6 +11,15 @@ const nextConfig: NextConfig = {
         ],
     },
     devIndicators: false,
+
+    turbopack: {
+        rules: {
+            '*.svg': {
+                loaders: ['@svgr/webpack'],
+                as: '*.js',
+            },
+        },
+    },
 };
 
 const withNextIntl = createNextIntlPlugin();
