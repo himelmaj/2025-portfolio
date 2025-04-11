@@ -42,7 +42,7 @@ export default async function LocaleLayout({ children, params }: LayoutProps) {
     const messages = await getMessages();
 
     return (
-        <html lang={locale}>
+        <html lang={locale} suppressHydrationWarning>
             <body className={cn(fontsVaribles)}>
                 <NextIntlClientProvider messages={messages}>
                     <ThemeProvider
