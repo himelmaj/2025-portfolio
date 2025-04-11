@@ -1,32 +1,32 @@
-import SocialLinks from "@/components/home/social-links"
-import Hero from "@/components/home/hero"
 import ThemeSwitcher from "@/components/layout/theme-switcher"
 import LocaleSwitcher from "@/components/layout/locale-switcher"
-// import PaintCanvas from "@/components/paint-canvas"
-import ExpandedCanvas from "@/components/home/expanded-canvas"
-
-import { query } from "@/lib/strapi";
-
+// import ExpandedCanvas from "@/components/home/expanded-canvas"
 import { getLocale } from "next-intl/server"
 import { Locale } from "@/i18n/routing";
+import { getHomeInfo } from "@/actions/get-home-info"
+import { BlocksRenderer, } from '@strapi/blocks-react-renderer';
+import { Suspense } from "react"
+
+import AboutSkeleton from "@/components/home/about-skeleton";
+
 const Home = async () => {
 
   const locale = await getLocale() as Locale;
 
-  const res = await query(`home?populate=image&locale=${locale}`)
+  const { about } = await getHomeInfo(locale)
 
-  console.log(res)
   return (
     <>
-      <ExpandedCanvas />
-      <div className="flex flex-wrap items-end content-end justify-between w-full gap-40">
-        <section className="flex flex-col max-h-50 justify-between h-full">
-          <ThemeSwitcher />
+      <div className="flex flex-wrap flex-1 items-end justify-between">
+        <section className="flex flex-col gap-4 max-w-sm ">
           <LocaleSwitcher />
-          <SocialLinks />
+          <ThemeSwitcher />
         </section>
-        <section className="flex flex-col max-h-50 justify-between h-full">
-          <Hero />
+        <section className="flex flex-col max-w-sm gap-4 [&>p>a]:underline">
+          <Suspense fallback={<AboutSkeleton />} >
+            {/* <ExpandedCanvas src={image.src} alt={image.alt} /> */}
+            <BlocksRenderer content={about} />
+          </Suspense>
         </section>
       </div>
     </>
@@ -35,4 +35,3 @@ const Home = async () => {
 }
 
 export default Home
-

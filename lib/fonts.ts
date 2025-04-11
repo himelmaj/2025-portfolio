@@ -1,4 +1,4 @@
-import { Inter } from "next/font/google";
+import { Inter, Pirata_One } from "next/font/google";
 import { cn } from "./utils";
 
 export const inter = Inter({
@@ -9,4 +9,12 @@ export const inter = Inter({
     style: "normal",
 });
 
-export const fontsVaribles = cn(inter.variable)
+export const pirata = Pirata_One({
+    variable: "--font-pirata",
+    weight: ["400"],
+    subsets: ["latin"],
+    display: "swap",
+    style: "normal",
+});
+
+export const fontsVaribles = cn(inter.variable, pirata.variable);

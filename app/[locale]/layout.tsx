@@ -1,7 +1,5 @@
 import "@/styles/globals.css";
 import { cn } from '@/lib/utils';
-import { unstable_ViewTransition as ViewTransition } from "react"
-
 //  i18n
 
 import { NextIntlClientProvider } from 'next-intl';
@@ -17,7 +15,7 @@ import { fontsVaribles } from "@/lib/fonts";
 
 import { ThemeProvider } from "@/context/theme-provider"
 
-import Header from "@/components/layout/header";
+import Navbar from "@/components/layout/navbar";
 
 import type { Metadata } from "next";
 
@@ -54,11 +52,14 @@ export default async function LocaleLayout({ children, params }: LayoutProps) {
                         disableTransitionOnChange
                     >
                         <div className="flex flex-col min-h-screen p-8">
-                            <Header />
+                            <header>
+                                <Navbar />
+                            </header>
 
-                            <ViewTransition name="page">
+                            <main className="flex flex-col flex-1">
                                 {children}
-                            </ViewTransition>
+                            </main>
+
                         </div>
 
                     </ThemeProvider>

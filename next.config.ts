@@ -1,5 +1,4 @@
 import { NextConfig } from 'next';
-
 import createNextIntlPlugin from 'next-intl/plugin';
 
 const nextConfig: NextConfig = {
@@ -7,15 +6,11 @@ const nextConfig: NextConfig = {
         remotePatterns: [
             {
                 protocol: "https",
-                hostname: "cdn.sanity.io",
-            }
+                hostname: "cms.himel.studio",
+            },
         ],
     },
     devIndicators: false,
-
-    experimental: {
-        viewTransition: true
-    }
 };
 
 const withNextIntl = createNextIntlPlugin();
