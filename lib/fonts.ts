@@ -1,4 +1,5 @@
-import { Inter, JetBrains_Mono, Roboto } from "next/font/google";
+import { Inter, Pirata_One } from "next/font/google";
+import { cn } from "./utils";
 
 export const inter = Inter({
     variable: "--font-inter",
@@ -8,14 +9,12 @@ export const inter = Inter({
     style: "normal",
 });
 
-export const jetbrains = JetBrains_Mono({
-    variable: "--font-jetbrains-mono",
-    weight: "400",
+export const pirata = Pirata_One({
+    variable: "--font-pirata",
+    weight: ["400"],
     subsets: ["latin"],
+    display: "swap",
+    style: "normal",
 });
 
-export const roboto = Roboto({
-    variable: "--font-roboto",
-    weight: ["400", "500", "700"],
-    subsets: ["latin"],
-});
+export const fontsVaribles = cn(inter.variable, pirata.variable);

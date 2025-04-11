@@ -16,13 +16,13 @@
             "path": "/",
             "label": "Home"
         },
-        "work": {
-            "path": "/work",
-            "label": "Work"
+        "projects": {
+            "path": "/projects",
+            "label": "Projects"
         },
-        "video": {
-            "path": "/video",
-            "label": "Video"
+        "info": {
+            "path": "/info",
+            "label": "Info"
         }
     },
     "locales": {
