@@ -43,7 +43,7 @@ export default async function LocaleLayout({ children, params }: LayoutProps) {
 
     return (
         <html lang={locale} suppressHydrationWarning>
-            <body className={cn(fontsVaribles)}>
+            <body className={cn(fontsVaribles, "bg-noise")}>
                 <NextIntlClientProvider messages={messages}>
                     <ThemeProvider
                         attribute="class"

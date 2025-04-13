@@ -146,4 +146,11 @@
   .border-text {
     -webkit-text-stroke: 2px black; /* Borde de 2px y color negro */
   }
+
+  .bg-noise {
+    background-image: url('/noise.png');
+    background-repeat: repeat;
+    background-size: 80px;
+  }
 }
+
