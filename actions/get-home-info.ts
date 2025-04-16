@@ -2,7 +2,7 @@ import "server-only";
 
 import { Locale } from "@/i18n/routing";
 import { env } from "@/config/env";
-import axios from "@/lib/axios";
+import strapi from "@/lib/strapi";
 import qs from "qs";
 
 
@@ -17,7 +17,7 @@ export const getHomeInfo = async (currentLocale: Locale = "en") => {
     }
   });
 
-  const { data: { about, image } } = await axios.get("/home?" + query);
+  const { data: { about, image } } = await strapi("home", query);
 
   const imageResponse = {
     src: new URL(image.url, env.STRAPI_HOST).toString(),
